@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 35.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 35.5: Amigo Zumbador o Roca Roncadora</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Kinderbot y 10 iBricks por cada pareja. Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Viaje al Planeta Zumbido! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir un nuevo escenario y la idea de que diferentes seres requieren diferentes interacciones.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda como astronautas listos para explorar un nuevo planeta.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Saludos, valientes astronautas del CODE SQUAD! ¡Abróchense los cinturones porque hoy despegamos hacia un planeta desconocido y emocionante! ¡El Planeta Zumbido! Dicen que está lleno de sorpresas. ¿Están listos para explorar con nuestro fiel compañero Kinderbot?"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que necesitan preparar la mente para reaccionar diferente según lo que encuentren.</td>
+                <td>
+                     <div class="dialogue">
+                        "Explorar planetas nuevos requiere estar ¡muy alerta! No sabemos qué vamos a encontrar, ¡y quizás tengamos que actuar diferente con cada cosa! Nuestro cerebro necesita ser súper rápido para decidir qué hacer. ¡Vamos al Gimnasio Cerebral a entrenar nuestras reacciones!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar movimientos variados (adelante, atrás, giros) para tenerlos listos para diferentes reacciones.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, incluyendo pasos adelante, atrás y giros.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Astronautas, a moverse! Este baile nos prepara para cualquier encuentro en el Planeta Zumbido. 'Adelante' para explorar... 'Girar' para saludar... ¡'Atrás' para alejarnos con cuidado! ¡Sigan la música y practiquen todos los movimientos! ¡Listos para la exploración!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - Zumbadores y Rocas Roncadoras -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">👽 Actividad 3: ¡Encuentros en Zumbido! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar los dos tipos de "seres" del planeta, construir sus representaciones con iBricks (abstracción) y definir el reto de programar reacciones distintas.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra sobre los habitantes del Planeta Zumbido: los Zumbadores amistosos y las Rocas Roncadoras dormilonas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Hemos aterrizado en Zumbido, equipo! ¡Miren! Este planeta tiene dos tipos de habitantes muy curiosos. Están los Zumbadores (muestra cómo apilar 3 iBricks): ¡son muy alegres, les encanta hacer amigos y bailar! ¡Hacen 'Bzzzz-Bailo'! Y también están las Rocas Roncadoras (muestra 1 iBrick solo): ¡son muy, muy dormilonas! ¡Hacen 'Rrrronc-Zzzzz'! ¡Y no les gusta NADA que las despierten!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Explica el reto: construir un Zumbador y una Roca con iBricks. Programar a Kinderbot para que reaccione diferente a cada uno (saludar/bailar con Zumbador, retroceder de Roca). Se programará UNA reacción a la vez.</td>
+                <td>
+                     <div class="dialogue">
+                        "Nuestra misión de exploración es aprender a interactuar con ambos. Primero, ¡construiremos un Amigo Zumbador con 3 bloques apilados, y una Roca Roncadora con 1 solo bloque! (Demuestra). El reto es enseñarle a Kinderbot qué hacer: **Si** se acerca a un Zumbador, **entonces** ¡tiene que bailar feliz (girar)! Pero **si** se acerca a una Roca Roncadora, **entonces** ¡tiene que retroceder silencioooosamente (ir atrás) para no despertarla! Hoy vamos a practicar UNA de esas reacciones. ¿Listos para construir y programar la reacción correcta?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos de Exploración Planetaria! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para construir las representaciones y planificar la secuencia de reacción.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que explorar y decidir cómo reaccionar es mejor en equipo. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Exploradores espaciales! ¡Aterrizar en un planeta nuevo y decidir cómo saludar o evitar a sus habitantes es una tarea para un equipo bien coordinado! ¡Juntos pueden construir al Zumbador y a la Roca, y planear los pasos exactos de Kinderbot! ¡Formen sus Equipos de Exploración Planetaria! ¡Busquen a su copiloto!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a construir ambos "seres" y a pensar qué reacción practicarán primero.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Excelente! Ahora, ¡construyan! Un Zumbador alto con 3 bloques, y una Roca bajita con 1 bloque. Pónganlos separados. Ahora piensen... ¿qué reacción quieren enseñarle primero a Kinderbot? ¿Saludar al Zumbador o evitar la Roca? ¡Decídanlo juntos!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando la Reacción! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código de Reacción Planetaria! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir las representaciones y programar UNA secuencia de reacción (saludo al Zumbador O evasión de la Roca) según el nivel y la elección del equipo.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir y Elegir Reacción -->
+             <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la **DIAPOSITIVA 8** "¡A Construir y Decidir!". Asegúrate de que tengan construidos el Zumbador (3 iBricks) y la Roca (1 iBrick). Pide que elijan qué reacción programarán: Saludar al Zumbador o Evitar la Roca. Repasa botones A, At, G.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Muy bien esas construcciones! ¡Ya tenemos Zumbadores y Rocas! Ahora, decisión importante: ¿Van a programar a Kinderbot para saludar al Zumbador (bailando/girando) o para evitar la Roca (yendo atrás)? ¡Elijan una! Recordemos botones: Adelante, Atrás, Girar Izquierda, Girar Derecha. ¡Listos para programar SU reacción!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel (las instrucciones son similares para ambas reacciones, cambia la acción final) -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Misión K1: Reacción Simple". Guía para programar 3 pasos: Acercarse (A, A) y luego Girar (si es Zumbador) O Retroceder (si es Roca).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! Para la reacción que eligieron: Primero, Kinderbot se acerca. ¡Dos pasos! Presionen 'Adelante', 'Adelante'. Ahora, el paso final: **Si** eligieron saludar al Zumbador, presionen 'Girar' (Izquierda o Derecha). **Si** eligieron evitar la Roca, presionen 'Atrás'. ¡Solo uno de los dos! Código: A, A, G (para Zumbador) ó A, A, At (para Roca). ¡Preparen, sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Misión K2: Reacción Elaborada". Guía para programar 4-5 pasos: Acercarse (A, A), realizar acción (Girar Izq+Girar Der si es Zumbador / Atrás+Atrás si es Roca).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! ¡Reacciones más elaboradas! Primero, acercarse -> 'Adelante', 'Adelante'. Ahora, la reacción: **Si** es el Zumbador, ¡un baile! -> 'Girar Izquierda', 'Girar Derecha'. **Si** es la Roca, ¡retroceder más! -> 'Atrás', 'Atrás'. ¡Elijan la secuencia que corresponde a su decisión! Serán 4 o 5 pasos. ¡Preparen el código! ¡Sin activar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Misión K3: ¡Dos Reacciones!". Guía para programar PRIMERO una reacción (5-6 pasos, ej. saludo: A, A, GI, GD, A) y LUEGO, si hay tiempo, borrar y programar la OTRA reacción (5-6 pasos, ej. evasión: A, A, At, At, G).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡Doble desafío! Primero, elijan UNA reacción y prográmenla con 5 o 6 pasos. Ejemplo saludo: Acercarse (A, A), bailar (GI, GD), ¿quizás un paso más (A)? Ejemplo evasión: Acercarse (A, A), retroceder rápido (At, At), ¿y girar para irse (G)? ¡Programen la primera reacción que eligieron! (Pausa). ¡Muy bien! Ahora (si hay tiempo), ¡borren con 'Clear' y programen la OTRA reacción! ¡Así Kinderbot sabrá hacer las dos cosas! ¡Preparen un código a la vez! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Probando la Interacción! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-reaccion')">
+        <div class="title">🚀 Actividad 6: ¡Encuentro Cercano! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código frente al objeto correspondiente (Zumbador o Roca) y observar si Kinderbot realiza la reacción programada.</div>
+    </div>
+    <div id="probando-reaccion" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Éxito K1!". Anima a poner a Kinderbot frente al objeto elegido y presionar 'Go'. Observar si realiza la acción final (Girar o Atrás). Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! Pongan a Kinderbot apuntando al ser que eligieron (Zumbador o Roca). ¿Listos con su código de 3 pasos? ¡Presionen 'Go'! Miren... Avanza, avanza... y... ¿Hizo lo correcto? ¿Giró para saludar al Zumbador? ¿O retrocedió de la Roca? ¡SIIII! ¡Le enseñaron a reaccionar! ¡Genial!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Éxito K2!". Anima a poner a Kinderbot frente al objeto elegido y presionar 'Go'. Observar si realiza la secuencia de 4-5 pasos correcta (doble giro o doble atrás). Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! ¡Kinderbot frente a su Zumbador o Roca! ¿Listos con el código de 4 o 5 pasos? ¡Presionen 'Go'! ¡Veamos la reacción! Avanza, avanza... ¿Hace el doble giro? ¿O retrocede dos veces? ¡LO HIZO! ¡Una reacción perfecta para cada habitante! ¡Bravo!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Éxito K3!". Anima a probar la PRIMERA reacción programada frente al objeto correcto. Luego, si programaron la segunda, probarla frente al otro objeto. Celebrar ambas reacciones exitosas.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡Primera prueba! Pongan a Kinderbot frente al objeto de su primera reacción programada (ej. Zumbador). ¡Presionen 'Go'! ¿Hizo la secuencia de 5-6 pasos? ¡Genial! Ahora, si programaron la segunda reacción (ej. para la Roca), ¡pongan a Kinderbot frente a la Roca y prueben ese código! ¿Funcionan las dos reacciones? ¡INCREÍBLE! ¡Le han enseñado a Kinderbot a comportarse perfectamente en el Planeta Zumbido! ¡Son programadores de primera!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 35.5) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Exploración Exitosa y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar la exploración y el aprendizaje de reacciones diferentes, reforzando la lógica condicional y la abstracción.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Cierra la historia (Kinderbot explorador exitoso). Realiza preguntas de reflexión sobre las diferentes reacciones.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡MISIÓN DE EXPLORACIÓN COMPLETADA, CODE SQUAD! ¡Nuestro valiente Kinderbot ha explorado el Planeta Zumbido y ha aprendido a tratar a cada habitante como se debe! ¡Saludó a los alegres Zumbadores y no despertó a las Rocas Roncadoras! ¡Todo gracias a ustedes, sus increíbles programadores! Pensemos en este viaje interplanetario:
+1. ¿Cómo representamos al Zumbador y a la Roca? (¡Con bloques!) ¿Usamos la misma cantidad de bloques para los dos? (No)
+2. ¿Kinderbot hizo lo mismo cuando se acercó al Zumbador y a la Roca? (¡No!) ¿Qué hizo diferente? (Bailó/Giró con uno, Retrocedió con el otro).
+3. ¿Por qué creen que es importante reaccionar diferente a veces?
+¡Han aprendido que podemos programar diferentes acciones para diferentes situaciones o cosas! ¡Eso es pensar como verdaderos científicos y programadores! ¡Felicidades por este gran descubrimiento! ¡Hasta la próxima exploración!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
